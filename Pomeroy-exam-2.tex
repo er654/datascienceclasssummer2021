@@ -1,0 +1,337 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Exam2Pomeroy},
+  pdfauthor={Pomeroy},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Exam2Pomeroy}
+\author{Pomeroy}
+\date{6/28/2021}
+
+\begin{document}
+\maketitle
+
+\hypertarget{r-markdown}{%
+\subsection{R Markdown}\label{r-markdown}}
+
+This is an R Markdown document. Markdown is a simple formatting syntax
+for authoring HTML, PDF, and MS Word documents. For more details on
+using R Markdown see \url{http://rmarkdown.rstudio.com}.
+
+When you click the \textbf{Knit} button a document will be generated
+that includes both content as well as the output of any embedded R code
+chunks within the document. You can embed an R code chunk like this:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(cars)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+\end{verbatim}
+
+\hypertarget{including-plots}{%
+\subsection{Including Plots}\label{including-plots}}
+
+You can also embed plots, for example:
+
+\includegraphics{Pomeroy-exam-2_files/figure-latex/pressure-1.pdf}
+
+Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
+chunk to prevent printing of the R code that generated the plot.
+
+\hypertarget{clear-environment}{%
+\section{clear environment}\label{clear-environment}}
+
+rm(list = ls(all(TRUE)))
+
+rm(list = ls())
+
+\hypertarget{load-dataset}{%
+\section{load dataset}\label{load-dataset}}
+
+college\_scorecard \textless- X2021\_exam2\_data
+
+\hypertarget{remove-x2021-df}{%
+\section{remove x2021 df}\label{remove-x2021-df}}
+
+rm(X2021\_exam2\_data)
+
+\hypertarget{load-tidyverse}{%
+\section{load tidyverse}\label{load-tidyverse}}
+
+library(tidyverse)
+
+\hypertarget{summary-college_scorecard}{%
+\section{summary college\_scorecard}\label{summary-college_scorecard}}
+
+summary(college\_scorecard)
+
+\hypertarget{summary-class}{%
+\section{summary class}\label{summary-class}}
+
+summary(college\_scorecard\$class)
+
+\hypertarget{create-small_scorecard}{%
+\section{create small\_scorecard}\label{create-small_scorecard}}
+
+small\_scorecard \textless- subset(college\_scorecard, select =
+c(``year'', ``state\_abbr''))
+
+\hypertarget{dataset-didnt-load-all-the-sheets-try-this-again}{%
+\section{dataset didn't load all the sheets :( try this
+again}\label{dataset-didnt-load-all-the-sheets-try-this-again}}
+
+\hypertarget{load-dataset-1}{%
+\section{load dataset}\label{load-dataset-1}}
+
+college\_scorecard \textless- X2021\_exam2\_data
+
+\hypertarget{make-small_scorecard}{%
+\section{make small\_scorecard}\label{make-small_scorecard}}
+
+small\_scorecard \textless- subset(college\_scorecard, select =
+c(``year'', ``state\_abbr''))
+
+\hypertarget{sorry-i-am-completely-blanking-on-how-to-do-for-loops-right-now-will-try-to-come-back-to-part-1}{%
+\section{sorry I am completely blanking on how to do for loops right now
+:/ will try to come back to part
+1}\label{sorry-i-am-completely-blanking-on-how-to-do-for-loops-right-now-will-try-to-come-back-to-part-1}}
+
+\hypertarget{load-avocados}{%
+\section{load avocados}\label{load-avocados}}
+
+avocados \textless- X2021\_exam2\_data
+
+\hypertarget{year-variable}{%
+\section{year variable}\label{year-variable}}
+
+avocados \%\textgreater\% year \textless- select(year)
+
+\hypertarget{hmm-nothing-is-really-working-try-reloading-everything}{%
+\section{hmm nothing is really working, try reloading
+everything}\label{hmm-nothing-is-really-working-try-reloading-everything}}
+
+install.packages(``tidyverse'') install.packages(``ggplot2'')
+install.packages(``lubridate'')
+
+library(tidyverse) library(ggplot2) library(lubridate)
+
+\hypertarget{try-making-year-variable-for-avocados}{%
+\section{try making year variable for
+avocados}\label{try-making-year-variable-for-avocados}}
+
+avocados \%\textgreater\% year \textless- select(avocados\$date(year)
+\%\textgreater\% mutate(year - make\_datetime(year))
+
+\#can't remember how to fix the select vs ``function'' error
+
+\hypertarget{deflate-the-average_price-variable}{%
+\section{deflate the average\_price
+variable}\label{deflate-the-average_price-variable}}
+
+\hypertarget{load-wdi-deflation-info}{%
+\section{load WDI deflation info}\label{load-wdi-deflation-info}}
+
+install.packages(``WDI'') library(WDI)
+
+\hypertarget{deflate-average-price-variable}{%
+\section{deflate average price
+variable}\label{deflate-average-price-variable}}
+
+deflated\_price\_2015 \textless- WDI(indicator =
+``API\_NY.GDP.DEFL.KD.ZG\_DS2\_en\_excel\_v2\_2446026'')
+
+\hypertarget{hmm-dont-think-i-found-the-correct-file-for-deflation}{%
+\section{hmm don't think I found the correct file for
+deflation}\label{hmm-dont-think-i-found-the-correct-file-for-deflation}}
+
+\hypertarget{httpsdata.worldbank.orgindicatorny.gdp.defl.zs-try-importing-this-one}{%
+\section{\texorpdfstring{\url{https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS}
+try importing this
+one}{https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS try importing this one}}\label{httpsdata.worldbank.orgindicatorny.gdp.defl.zs-try-importing-this-one}}
+
+\hypertarget{create-deflated-price-variable-2015}{%
+\section{create deflated price variable
+2015}\label{create-deflated-price-variable-2015}}
+
+deflated\_price\_2015 \textless- WDI(country = ``all'', indicator =
+c(``API\_NY\_GDP\_DEFL\_ZS''), start = 2015, end = 2015, extra = FALSE,
+cache = NULL)
+
+\hypertarget{not-really-sure-whats-going-on-with-trying-to-pull-the-data-hmm}{%
+\section{not really sure what's going on with trying to pull the data
+hmm}\label{not-really-sure-whats-going-on-with-trying-to-pull-the-data-hmm}}
+
+\hypertarget{indicator-is-1.041461871}{%
+\section{2015 indicator is 1.041461871}\label{indicator-is-1.041461871}}
+
+deflator\_2015 \textless- 1.041461871
+
+\hypertarget{indicator-is-1.035268879}{%
+\section{2016 indicator is 1.035268879}\label{indicator-is-1.035268879}}
+
+deflator\_2016 \textless- 1.035268879
+
+\hypertarget{indicator-is-1.88368859}{%
+\section{2017 indicator is 1.88368859}\label{indicator-is-1.88368859}}
+
+deflator\_2017 \textless- 1.88368859
+
+\hypertarget{indicator-is-2.436001896}{%
+\section{2018 indicator is 2.436001896}\label{indicator-is-2.436001896}}
+
+deflator\_2018 \textless- 2.436001896
+
+deflator deflated\_price\_2015 \textless-
+
+\#skipping this, collapsing df =
+
+head(avocados)
+
+collapsed\_avocados \textless-
+
+avocados \%\textgreater\%
+
+group\_by(c(deflated\_price\_2015, deflated\_price\_2016,
+deflated\_price\_2017, deflated\_price\_2018))
+
+\hypertarget{then-i-would-check-by-headcollapsed_avocados-if-i-had-done-the-rest-of-this-problem-right}{%
+\section{then I would check by head(collapsed\_avocados if I had done
+the rest of this problem
+right)}\label{then-i-would-check-by-headcollapsed_avocados-if-i-had-done-the-rest-of-this-problem-right}}
+
+head(collapsed\_avocados)
+
+\hypertarget{reshaping-the-guacamole-wider}{%
+\section{reshaping the guacamole
+wider}\label{reshaping-the-guacamole-wider}}
+
+collapsed\_avocados \%\textgreater\%
+
+wide avocados \textless- pivot\_wider(id\_cols = c(``date'',
+``average\_price'') names\_from = ``date'', values\_from =
+``average\_price'')
+
+\hypertarget{im-running-out-of-time-whoops}{%
+\section{I'm running out of time :/
+whoops}\label{im-running-out-of-time-whoops}}
+
+\hypertarget{training-dataset-qs}{%
+\section{training dataset q's}\label{training-dataset-qs}}
+
+training \textless- X2021\_exam2\_data
+
+\hypertarget{reshape-the-df-long}{%
+\section{reshape the df long}\label{reshape-the-df-long}}
+
+pivot\_longer(cols = starts\_with(""))
+
+\end{document}

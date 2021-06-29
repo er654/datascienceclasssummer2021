@@ -1,0 +1,171 @@
+---
+title: "Exam2Pomeroy"
+author: "Pomeroy"
+date: "6/28/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# clear environment
+rm(list = ls(all(TRUE)))
+
+rm(list = ls())
+
+# load dataset
+
+college_scorecard <- X2021_exam2_data
+
+# remove x2021 df
+rm(X2021_exam2_data)
+
+# load tidyverse
+library(tidyverse)
+
+# summary college_scorecard
+
+summary(college_scorecard)
+
+# summary class
+
+summary(college_scorecard$class)
+
+# create small_scorecard
+
+small_scorecard <- 
+  subset(college_scorecard, 
+    select = c("year", "state_abbr"))
+    
+# dataset didn't load all the sheets :( try this again
+
+# load dataset
+college_scorecard <- X2021_exam2_data
+
+# make small_scorecard
+
+small_scorecard <-
+  subset(college_scorecard, select = c("year", "state_abbr"))
+
+# sorry I am completely blanking on how to do for loops right now :/ will try to come back to part 1 
+
+# load avocados
+
+avocados <- X2021_exam2_data 
+
+# year variable
+ avocados %>%
+year <- select(year)
+ 
+# hmm nothing is really working, try reloading everything
+
+install.packages("tidyverse")
+install.packages("ggplot2")
+install.packages("lubridate")
+
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+
+# try making year variable for avocados
+avocados %>%
+year <- select(avocados$date(year) %>%
+mutate(year - make_datetime(year))
+
+#can't remember how to fix the select vs "function" error
+
+# deflate the average_price variable
+
+# load WDI deflation info
+install.packages("WDI")
+library(WDI)
+
+# deflate average price variable
+
+deflated_price_2015 <- WDI(indicator = "API_NY.GDP.DEFL.KD.ZG_DS2_en_excel_v2_2446026")
+
+# hmm don't think I found the correct file for deflation
+
+# https://data.worldbank.org/indicator/NY.GDP.DEFL.ZS try importing this one
+
+# create deflated price variable 2015
+
+deflated_price_2015 <- WDI(country = "all", indicator = c("API_NY_GDP_DEFL_ZS"),
+  start = 2015, 
+  end = 2015,
+  extra = FALSE, cache = NULL)
+  
+# not really sure what's going on with trying to pull the data hmm
+
+# 2015 indicator is 1.041461871
+deflator_2015 <- 1.041461871
+
+# 2016 indicator is 1.035268879
+
+deflator_2016 <- 1.035268879
+
+# 2017 indicator is 1.88368859
+
+deflator_2017 <-  1.88368859
+
+# 2018 indicator is 2.436001896
+
+deflator_2018 <- 2.436001896
+
+
+deflator
+deflated_price_2015 <- 
+
+#skipping this, collapsing df = 
+
+head(avocados)
+
+collapsed_avocados <-
+
+avocados %>%
+
+group_by(c(deflated_price_2015, deflated_price_2016, deflated_price_2017, deflated_price_2018))
+
+# then I would check by head(collapsed_avocados if I had done the rest of this problem right)
+
+head(collapsed_avocados)
+
+# reshaping the guacamole wider
+
+collapsed_avocados %>%
+
+wide avocados <- 
+  pivot_wider(id_cols = c("date",	"average_price")
+   names_from = "date",
+    values_from = "average_price")
+    
+# I'm running out of time :/ whoops
+
+# training dataset q's
+
+training <- X2021_exam2_data
+
+# reshape the df long
+
+pivot_longer(cols = starts_with(""))
