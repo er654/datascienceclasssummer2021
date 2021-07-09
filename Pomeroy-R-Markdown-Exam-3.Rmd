@@ -1,0 +1,19 @@
+---
+title: "Exam 3 R Markdown"
+author: "Pomeroy"
+date: "7/8/2021"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Shiny App
+The three main components of a Shiny App are the input, output, and the user interface (UI).
+*Input* is comprised of input controls which allow a user to interact with reactive functions.
+*Output* is comprised of objects that display different visualizations based on the type of input provided. These can be as simple as text or as complicated as an interactive plot.
+The *UI* is comprised of a user interface *object* and the *server* that it communicates with.They work as a pair.
+
